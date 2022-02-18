@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	@Timed(value = "get.all.user", description = "time taken get all user")
+	@Timed(value = "get_user", description = "time taken get all user")
 	public List<UserDto> getAllUser() throws ServiceException {
 		List<UserEntity> userEntities = null;
 		try {
