@@ -16,5 +16,6 @@ azure:
     instrumentation-key=f9e62871-38ef-4f6f-ba40-882ada0261a3
 spring:
   h2:
-    console.enabled: true
+    console:
+      enabled: true
   
