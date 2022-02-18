@@ -29,6 +29,8 @@ import com.pranav.space_management_system.repository.RoomRepository;
 import com.pranav.space_management_system.repository.UserRepository;
 import com.pranav.space_management_system.service.UserService;
 
+import io.micrometer.core.annotation.Timed;
+
 @Component
 public class UserServiceImpl implements UserService {
 
@@ -59,6 +61,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	@Timed(value = "get.all.user", description = "time taken get all user")
 	public List<UserDto> getAllUser() throws ServiceException {
 		List<UserEntity> userEntities = null;
 		try {
