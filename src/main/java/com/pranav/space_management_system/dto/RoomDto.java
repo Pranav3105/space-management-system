@@ -23,7 +23,7 @@ public class RoomDto implements Serializable {
 	private long roomId;
 	private String roomNumber;
 	private BuildingDto building;
-	@JsonIgnoreProperties("room")
+	@JsonIgnoreProperties(value="room", allowSetters = true)
 	private List<UserDto> users = new ArrayList<>();
 	/**
 	 * @return the roomId
