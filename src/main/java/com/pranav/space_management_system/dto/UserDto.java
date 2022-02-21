@@ -20,7 +20,7 @@ public class UserDto implements Serializable {
 	
 	private long userId;
 	private String userName;
-	@JsonIgnoreProperties("users")
+	@JsonIgnoreProperties(value="users", allowSetters = true)
 	private RoomDto room;
 	/**
 	 * @return the userId
